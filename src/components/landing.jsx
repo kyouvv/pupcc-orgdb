@@ -34,7 +34,7 @@ function Landing() {
     };
     
     return (
-        <div className={`bg-[url(https://cdn.discordapp.com/attachments/813768653761806366/1217797882032164896/Untitled_design_11.png?ex=660555a8&is=65f2e0a8&hm=0425a2db9b56ce595c62a4ee5143e2245a57ee0855c1e8ab613712b0af63a34a&)] bg-cover bg-center h-screen w-screen flex justify-center items-center`}>
+        <div className="bg-[url('https://cdn.discordapp.com/attachments/813768653761806366/1217797882032164896/Untitled_design_11.png?ex=660555a8&is=65f2e0a8&hm=0425a2db9b56ce595c62a4ee5143e2245a57ee0855c1e8ab613712b0af63a34a&')] bg-cover bg-center h-screen w-screen flex justify-center items-center">
             <div className="card lg:card-side bg-base-200 text-center w-auto shadow-xl flex flex-col items-center">
                 <img className="h-96 object-contain p-4" src={PUPCCLogo} alt="PUPCC-LOGO" />
                 <div className="w-96 m-5 flex flex-col items-center">
