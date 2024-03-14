@@ -4,6 +4,7 @@ import '../output.css';
 import PUPCCLogo from '../assets/PUPCC-Logo.png';
 import { FaFacebook, FaDiscord } from "react-icons/fa6";
 import SearchBar from "./searchbar";
+import home_bg from '../assets/home-bg.png';
 
 function Landing() {
 
@@ -33,7 +34,7 @@ function Landing() {
     };
     
     return (
-        <div className="bg-[url('./assets/home-bg.png')] bg-cover bg-center h-screen w-screen flex justify-center items-center">
+        <div className={`bg-${home_bg} bg-cover bg-center h-screen w-screen flex justify-center items-center`}>
             <div className="card lg:card-side bg-base-200 text-center w-auto shadow-xl flex flex-col items-center">
                 <img className="h-96 object-contain p-4" src={PUPCCLogo} alt="PUPCC-LOGO" />
                 <div className="w-96 m-5 flex flex-col items-center">
