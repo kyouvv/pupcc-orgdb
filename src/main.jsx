@@ -7,11 +7,11 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/pupcc-orgdb",
     element: <App />,
   },
   {
-    path: "/database",
+    path: "/pupcc-orgdb/database",
     element: <DatabaseRoute />,
   }
 ]);
