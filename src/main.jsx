@@ -7,11 +7,11 @@ import { createHashRouter, RouterProvider } from 'react-router-dom'
 
 const router = createHashRouter([
   {
-    path: "/pupcc-orgdb",
+    path: "/",
     element: <App />,
   },
   {
-    path: "/pupcc-orgdb/database",
+    path: "/database",
     element: <DatabaseRoute />,
   }
 ]);
