@@ -51,7 +51,7 @@ const Database = ({ data }) => {
     return (
         <div className="bg-[url(https://cdn.discordapp.com/attachments/813768653761806366/1218410348223139921/Untitled_design_13.png?ex=6607900f&is=65f51b0f&hm=814f08f6efce005ec35044dc541a092a54a3d9ef455f7b8d9816941ca8e9514f&)] bg-cover bg-center w-screen h-screen">
             <div className="navbar p-2 m-2">
-                <div className="flex-1">
+                <div className="flex-1 gap-3">
                     <Link to={'/'} className="btn btn-ghost text-xl">Organization Database</Link>
                 </div>
                 <div className="flex">
