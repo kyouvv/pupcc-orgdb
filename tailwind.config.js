@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{html,jsx,js}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        VT323 : ["VT323"]
+      }
+    },
   },
   daisyui: {
     themes: [
@@ -13,11 +17,11 @@ module.exports = {
         
 "secondary": "#0074ff",
         
-"accent": "#105d00",
+"accent": "#5E59C9",
         
 "neutral": "#17080f",
         
-"base-100": "#fff8de",
+"base-100": "#1f1b47",
         
 "info": "#00d3ff",
         
