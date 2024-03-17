@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client'
 import './output.css'
 import App from './home.jsx'
 import DatabaseRoute from './database_route.jsx'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createHashRouter, RouterProvider } from 'react-router-dom'
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/pupcc-orgdb",
     element: <App />,
