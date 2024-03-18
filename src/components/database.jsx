@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
 import Card from "./org_card";
 import { Link } from "react-router-dom";
-import { motion as m, AnimatePresence } from "framer-motion";
+import { motion as m } from "framer-motion";
 
 const Database = ({ data }) => {
     const [currentPage, setCurrentPage] = useState(0);
@@ -48,14 +48,8 @@ const Database = ({ data }) => {
         },
     };
 
-    const landingVariants = {
-        hidden: { opacity: 0, translateY: "100%" },
-        visible: { opacity: 1, translateY: 0 },
-    };
-
     return (
-        <m.div
-        className="bg-[url(https://cdn.discordapp.com/attachments/813768653761806366/1218410348223139921/Untitled_design_13.png?ex=6607900f&is=65f51b0f&hm=814f08f6efce005ec35044dc541a092a54a3d9ef455f7b8d9816941ca8e9514f&)] bg-cover bg-center w-screen h-screen overflow-hidden">
+        <m.div className="bg-[url(https://cdn.discordapp.com/attachments/813768653761806366/1218410348223139921/Untitled_design_13.png?ex=6607900f&is=65f51b0f&hm=814f08f6efce005ec35044dc541a092a54a3d9ef455f7b8d9816941ca8e9514f&)] bg-cover bg-center w-screen h-screen overflow-x-hidden">
             <div className="navbar p-2 m-2">
                 <div className="flex-1">
                     <Link to={'/'} className="btn btn-ghost text-xl">Organization Database</Link>
@@ -72,19 +66,19 @@ const Database = ({ data }) => {
                     </div>
                 </div>
             </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-                    {currentItems.map((item, index) => (
-                        <div>
-                            <Card
-                                image={item.image}
-                                title={item.name}
-                                description={item.description}
-                                date={item.date}
-                            />
-                        </div>
-                    ))}
-                </div>
-            <div className="mt-8 flex justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                {currentItems.map((item, index) => (
+                    <div key={index}>
+                        <Card
+                            image={item.image}
+                            title={item.name}
+                            description={item.description}
+                            social={item.social}
+                        />
+                    </div>
+                ))}
+            </div>
+            <div className="flex justify-center p-2">
                 <m.div
                     className="pagination"
                     variants={paginationVariants}
@@ -97,7 +91,7 @@ const Database = ({ data }) => {
                         breakLabel={<span className="border-r border-gray-300 mx-2 h-5 inline-block"></span>}
                         pageCount={Math.ceil(filteredData.length / itemsPerPage)}
                         marginPagesDisplayed={2}
-                        pageRangeDisplayed={5}
+                        pageRangeDisplayed={3}
                         onPageChange={handlePageChange}
                         containerClassName={"flex space-x-2"}
                         pageLinkClassName={"join-item btn"}
