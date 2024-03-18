@@ -75,6 +75,7 @@ const Database = ({ data }) => {
                             title={item.name}
                             description={item.description}
                             social={item.social}
+                            category={item.category}
                         />
                     </div>
                 ))}
