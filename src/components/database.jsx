@@ -54,7 +54,7 @@ const Database = ({ data }) => {
                 <div className="flex-1">
                     <Link to={'/'} className="btn btn-ghost text-xl">Organization Database</Link>
                 </div>
-                <div className="flex-none gap-3 mr-6">
+                <div className="flex-none gap-3">
                     <div className="form-control w-96">
                         <input
                             type="text"
