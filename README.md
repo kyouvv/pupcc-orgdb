@@ -152,3 +152,35 @@ const onChange = (event) => {
     }) : [];
 ```
 Main functions. For filtering and handling changes with the input field.
+
+# Data Fetching
+
+```jsx
+useEffect(() => {
+        let timeout; // Declare timeout variable
+        fetchData()
+            .then(apiData => {
+                setData(apiData);
+                setLoading(false);
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+                setLoading(false);
+            });
+    }, []);
+
+    const fetchData = async () => {
+        try {
+            const response = await fetch('https://pupcc-web.onrender.com/api/getorgs');
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const data = await response.json();
+            console.log(data)
+            return data;
+        } catch (error) {
+            throw new Error('Error fetching data:', error);
+        }
+    };
+```
+Data fetching happens within the App.jsx and Database_route.jsx, I have implemented a loading screen since the data does not load instantly. It fetches the data from `https://pupcc-web.onrender.com/api/getorgs`. A python flask Backend.
