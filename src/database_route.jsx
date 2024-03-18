@@ -36,7 +36,7 @@ const DatabaseRoute = () => {
 
     return (
         <div>
-            <AnimatePresence>
+            <AnimatePresence mode="wait">
                 {loading ? <LoadingScreen key="loading" /> : <Database data={data} />}
             </AnimatePresence>
         </div>
