@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const DaisyUICard = ({ image, title, description, social }) => {
+const DaisyUICard = ({ image, title, description, social, category }) => {
     const handleDetailsClick = () => {
         // Implement logic to navigate to detailed view
     };
@@ -23,6 +23,9 @@ const DaisyUICard = ({ image, title, description, social }) => {
                     <div className="mt-4">
                         <button className="btn btn-sm btn-secondary" onClick={handleDetailsClick}>Details</button>
                         <a href={social} className="btn btn-sm btn-info ml-2">Social</a>
+                    </div>
+                    <div className="card-actions text-right">
+                              <div class="badge badge-outline">{category}</div> 
                     </div>
                 </div>
             </div>

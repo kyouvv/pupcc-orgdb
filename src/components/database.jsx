@@ -24,7 +24,8 @@ const Database = ({ data }) => {
         const filteredItems = data.filter(
             (item) =>
                 item.name.toLowerCase().includes(value) ||
-                item.description.toLowerCase().includes(value)
+                item.description.toLowerCase().includes(value) ||
+                item.category.toLowerCase().includes(value)
         );
         setFilteredData(filteredItems);
         setCurrentPage(0);
