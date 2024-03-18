@@ -50,16 +50,16 @@ const Database = ({ data }) => {
 
     return (
         <m.div className="bg-[url(https://cdn.discordapp.com/attachments/813768653761806366/1218410348223139921/Untitled_design_13.png?ex=6607900f&is=65f51b0f&hm=814f08f6efce005ec35044dc541a092a54a3d9ef455f7b8d9816941ca8e9514f&)] bg-cover bg-center w-screen h-screen overflow-x-hidden">
-            <div className="navbar p-2 m-2">
+            <div className="navbar mb-2">
                 <div className="flex-1">
-                    <Link to={'/'} className="btn btn-ghost text-xl">Organization Database</Link>
+                    <Link to={'/'} className="btn btn-ghost text-xl"><i className="material-icons">arrow_back</i></Link>
                 </div>
-                <div className="flex-none gap-2">
-                    <div className="form-control w-96">
+                <div className="flex-none gap-2 ">
+                    <div className="form-control sm:w-auto lg:w-96 lg:mr-5">
                         <input
                             type="text"
                             placeholder="Search"
-                            className="input input-bordered w-24 md:w-auto"
+                            className="input input-bordered w-24 md:w-auto rounded-sm hover:bg-slate-200 hover:shadow-lg hover:shadow-white transition-all duration-300"
                             value={searchTerm}
                             onChange={handleSearch}
                         />
