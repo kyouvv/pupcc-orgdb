@@ -101,7 +101,7 @@ const Database = ({ data }) => {
                         breakLabel={<button className="join-item btn btn-outline">...</button>}
                         pageCount={Math.ceil(filteredData.length / itemsPerPage)}
                         marginPagesDisplayed={1}
-                        pageRangeDisplayed={3}
+                        pageRangeDisplayed={1}
                         onPageChange={handlePageChange}
                         containerClassName={"flex space-x-2"}
                         pageLinkClassName={"join-item btn btn-outline"}
