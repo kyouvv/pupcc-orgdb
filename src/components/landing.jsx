@@ -17,7 +17,7 @@ const Landing = ({ data }) => {
             initial="hidden"
             animate="visible"
             variants={landingVariants}
-            className={`bg-[url('https://cdn.discordapp.com/attachments/813768653761806366/1217797882032164896/Untitled_design_11.png?ex=660555a8&is=65f2e0a8&hm=0425a2db9b56ce595c62a4ee5143e2245a57ee0855c1e8ab613712b0af63a34a&')] bg-cover bg-center h-screen w-screen flex justify-center items-center`}
+            className={`bg-[url('https://cdn.discordapp.com/attachments/813768653761806366/1219138073481449513/Untitled_design_3.gif?ex=660a35cf&is=65f7c0cf&hm=57033b779109b0b36e8f3d0b7bd508ef3fdac3dc3fb852f29409eff50a5314b9&')] bg-cover bg-center h-screen w-screen flex justify-center items-center`}
         >
             <div className="rounded-md lg:card-side bg-neutral text-center w-auto shadow-xl flex flex-col items-center">
                 <motion.img
