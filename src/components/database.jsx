@@ -60,11 +60,11 @@ const Database = ({ data }) => {
         variants={landingVariants}
         className="bg-[url(https://cdn.discordapp.com/attachments/813768653761806366/1218410348223139921/Untitled_design_13.png?ex=6607900f&is=65f51b0f&hm=814f08f6efce005ec35044dc541a092a54a3d9ef455f7b8d9816941ca8e9514f&)] bg-cover bg-center w-screen h-screen">
             <div className="navbar p-2 m-2">
-                <div className="flex-1 gap-3">
+                <div className="flex-1 ">
                     <Link to={'/'} className="btn btn-ghost text-xl">Organization Database</Link>
                 </div>
-                <div className="flex">
-                    <div className="form-control">
+                <div className="flex-none gap-3">
+                    <div className="form-control w-96">
                         <input
                             type="text"
                             placeholder="Search"
@@ -75,7 +75,7 @@ const Database = ({ data }) => {
                     </div>
                 </div>
             </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                     {currentItems.map((item, index) => (
                         <div>
                             <Card
