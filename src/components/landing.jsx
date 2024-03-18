@@ -1,15 +1,21 @@
-import React from "react";
+import { React } from "react";
 import '../output.css';
 import PUPCCLogo from '../assets/PUPCC-Logo.png';
 import { FaFacebook, FaDiscord } from "react-icons/fa6";
 import SearchBar from "./searchbar";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Landing = ({ data }) => {
+    const navigate = useNavigate();
     const landingVariants = {
         hidden: { opacity: 0, translateY: "100%" },
         visible: { opacity: 1, translateY: 0 },
+    };
+
+    const handleSuggestionClick = (searchTerm) => {
+        // Navigate to the database route with search term as a query parameter
+        navigate(`/database?search=${encodeURIComponent(searchTerm)}`);
     };
 
     return (
@@ -29,7 +35,7 @@ const Landing = ({ data }) => {
                     alt="PUPCC-LOGO"
                 />
                 <div className="w-96 m-5 flex flex-col items-center">
-                    <SearchBar data={data} />
+                    <SearchBar data={data} onSuggestionClick={handleSuggestionClick} />
                     <Link to={'/database'} className='btn bg-success'><i className="material-icons">visibility</i>View Database</Link>
                     <div className="mt-2 p-2 border border-gray-300 rounded-md w-full text-justify bg-neutral-200 text-gray-500">
                         <p>PUP Campus Connect Organizations Database contains information on active organizations within the PUP System. This database aims to help students find organizations that interest them and have information about the organizations as they need.</p>

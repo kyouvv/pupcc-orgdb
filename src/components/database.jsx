@@ -1,18 +1,32 @@
-import React, { useState, useEffect } from "react";
+import { React, useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
 import Card from "./org_card";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams, useLocation } from "react-router-dom";
 import { motion as m } from "framer-motion";
 
 const Database = ({ data }) => {
+    const location = useLocation();
+    const [searchTerm, setSearchTerm] = useState('');
     const [currentPage, setCurrentPage] = useState(0);
     const [itemsPerPage] = useState(6);
-    const [searchTerm, setSearchTerm] = useState("");
     const [filteredData, setFilteredData] = useState(data);
+    const [searchParams, setSearchParams] = useSearchParams();
 
     useEffect(() => {
-        setFilteredData(data);
-    }, [data]);
+        // Read search term from URL query parameter
+        const params = new URLSearchParams(location.search);
+        const searchTermParam = params.get("search") || '';
+        setSearchTerm(searchTermParam);
+
+        // Filter data based on search term
+        const filteredItems = data.filter(
+            (item) =>
+                item.name.toLowerCase().includes(searchTermParam.toLowerCase()) ||
+                item.description.toLowerCase().includes(searchTermParam.toLowerCase()) ||
+                item.category.toLowerCase().includes(searchTermParam.toLowerCase())
+        );
+        setFilteredData(filteredItems);
+    }, [data, location.search]);
 
     const handlePageChange = ({ selected }) => {
         setCurrentPage(selected);
@@ -20,15 +34,9 @@ const Database = ({ data }) => {
 
     const handleSearch = (event) => {
         const value = event.target.value.toLowerCase();
-        setSearchTerm(event.target.value);
-        const filteredItems = data.filter(
-            (item) =>
-                item.name.toLowerCase().includes(value) ||
-                item.description.toLowerCase().includes(value) ||
-                item.category.toLowerCase().includes(value)
-        );
-        setFilteredData(filteredItems);
-        setCurrentPage(0);
+        setSearchTerm(value);
+        // Update URL query parameter with search term
+        setSearchParams({ search: value });
     };
 
     const indexOfLastItem = (currentPage + 1) * itemsPerPage;
@@ -90,16 +98,16 @@ const Database = ({ data }) => {
                     <ReactPaginate
                         previousLabel={<i className="material-icons">chevron_left</i>}
                         nextLabel={<i className="material-icons">chevron_right</i>}
-                        breakLabel={<button className="join-item btn">...</button>}
+                        breakLabel={<button className="join-item btn btn-outline">...</button>}
                         pageCount={Math.ceil(filteredData.length / itemsPerPage)}
                         marginPagesDisplayed={1}
                         pageRangeDisplayed={3}
                         onPageChange={handlePageChange}
                         containerClassName={"flex space-x-2"}
-                        pageLinkClassName={"join-item btn"}
+                        pageLinkClassName={"join-item btn btn-outline"}
                         activeLinkClassName={"join-item btn btn-active"}
-                        previousLinkClassName={"join-item btn"}
-                        nextLinkClassName={"join-item btn"}
+                        previousLinkClassName={"join-item btn btn-outline   "}
+                        nextLinkClassName={"join-item btn btn-outline"}
                         disabledClassName={"join-item btn-disabled"}
                     />
                 </m.div>

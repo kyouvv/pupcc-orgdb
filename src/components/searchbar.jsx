@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function SearchBar({ data }) {
+export default function SearchBar({ data, onSuggestionClick }) {
     const [value, setValue] = useState('');
     const [showSuggestions, setShowSuggestions] = useState(false);
 
@@ -26,7 +26,7 @@ export default function SearchBar({ data }) {
             <div className="bg-base-100 rounded-md absolute top-full left-0 w-full z-10 transition-opacity max-h-72 overflow-auto">
                 {filteredData.map(item => (
                     <div key={item.name} className="">
-                        <button className="btn w-full bg-base-100">{item.name}</button>
+                        <button className="btn w-full bg-base-100" onClick={() => onSuggestionClick(item.name)}>{item.name}</button>
                     </div>
                 ))}
             </div>
