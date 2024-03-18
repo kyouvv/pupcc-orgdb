@@ -9,12 +9,12 @@ const DaisyUICard = ({ image, title, description, date }) => {
 
     return (
         <motion.div
-            className="card bg-accent shadow-lg rounded-lg overflow-hidden glass"
+            className="card bg-accent shadow-lg rounded-lg overflow-hidden glass w-auto m-2"
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
         >
-            <img className="w-1/3 h-1/3 object-cover object-center" src={image} alt={title} />
+            <img className="object-cover object-center" src={image} alt={title} />
             <div className="card-body">
                 <h2 className="card-title text-gray-900 font-bold text-xl mb-2">{title}</h2>
                 <p className="card-text text-gray-800 text-base">{description}</p>
