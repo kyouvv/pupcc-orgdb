@@ -14,7 +14,7 @@ const DaisyUICard = ({ image, title, description, date }) => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
         >
-            <img className="w-full h-56 object-cover object-center" src={image} alt={title} />
+            <img className="w-1/3 h-1/3 object-cover object-center" src={image} alt={title} />
             <div className="card-body">
                 <h2 className="card-title text-gray-900 font-bold text-xl mb-2">{title}</h2>
                 <p className="card-text text-gray-800 text-base">{description}</p>
