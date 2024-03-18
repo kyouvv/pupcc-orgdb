@@ -88,9 +88,9 @@ const Database = ({ data }) => {
                     <ReactPaginate
                         previousLabel={<i className="material-icons">chevron_left</i>}
                         nextLabel={<i className="material-icons">chevron_right</i>}
-                        breakLabel={<span className="border-r border-gray-300 mx-2 h-5 inline-block"></span>}
+                        breakLabel={<button className="join-item btn">...</button>}
                         pageCount={Math.ceil(filteredData.length / itemsPerPage)}
-                        marginPagesDisplayed={2}
+                        marginPagesDisplayed={1}
                         pageRangeDisplayed={3}
                         onPageChange={handlePageChange}
                         containerClassName={"flex space-x-2"}
@@ -98,7 +98,7 @@ const Database = ({ data }) => {
                         activeLinkClassName={"join-item btn btn-active"}
                         previousLinkClassName={"join-item btn"}
                         nextLinkClassName={"join-item btn"}
-                        disabledClassName={"opacity-50 cursor-not-allowed"}
+                        disabledClassName={"join-item btn-disabled"}
                     />
                 </m.div>
             </div>
