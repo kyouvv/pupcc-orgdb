@@ -1,35 +1,54 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
+import { FaFacebook, FaDiscord } from "react-icons/fa6";
 
 export default function SearchBar({ data, onSuggestionClick }) {
     const [value, setValue] = useState('');
+    const [filteredData, setFilteredData] = useState([]);
     const [showSuggestions, setShowSuggestions] = useState(false);
 
     const onChange = (event) => {
         const searchTerm = event.target.value.toLowerCase();
         setValue(event.target.value);
         setShowSuggestions(searchTerm !== '');
+
+        // Filter the data based on the search term
+        const filteredData = data.filter(item => {
+            const name = item.name.toLowerCase();
+            return name.includes(searchTerm);
+        });
+        setFilteredData(filteredData);
     }
 
-    // Filter the data based on the search term
-    const filteredData = data ? data.filter(item => {
-        const term = value.toLowerCase();
-        const name = item.name.toLowerCase();
-        return term && name.startsWith(term);
-    }) : [];
+    const handleSuggestionClick = (searchTerm) => {
+        setValue(searchTerm);
+        setShowSuggestions(false);
+        onSuggestionClick(searchTerm);
+    };
 
     return (
-        <div className="relative">
-            <div className="flex flex-row items-center mb-2 justify-center">
-                <input className="input mr-2" type="text" placeholder="Search Organization" value={value} onChange={onChange} />
-                <button className='btn btn-accent'><i className="material-icons">search</i></button>
-            </div>
-            <div className="bg-base-100 rounded-md absolute top-full left-0 w-full z-10 transition-opacity max-h-72 overflow-auto">
-                {filteredData.map(item => (
-                    <div key={item.name} className="">
-                        <button className="btn w-full bg-base-100" onClick={() => onSuggestionClick(item.name)}>{item.name}</button>
-                    </div>
-                ))}
-            </div>
+        <div className="relative flex flex-row items-center m-2 justify-center rounded-md">
+            <input
+                className="input mr-2"
+                type="text"
+                placeholder="Search Organization"
+                value={value}
+                onChange={onChange}
+            />
+
+            {showSuggestions && filteredData.length > 0 && (
+                <div className="absolute z-10 w-full h-60 top-full bg-white border border-gray-300 rounded-md shadow-lg overflow-y-auto">
+                    {filteredData.map(item => (
+                        <button
+                            key={item.name}
+                            className="block w-full px-4 py-2 text-left hover:bg-gray-100"
+                            onClick={() => handleSuggestionClick(item.name)}
+                        >
+                            {item.name}
+                        </button>
+                    ))}
+                </div>
+            )}
         </div>
     );
 }

@@ -2,37 +2,14 @@
 module.exports = {
   content: ["./src/**/*.{html,jsx,js}"],
   theme: {
+    fontFamily: {
+      'Lobster' : ["Lobster", "sans-serif"]
+    },
     extend: {
-      fontFamily: {
-        VT323 : ["VT323"]
-      }
     },
   },
   daisyui: {
-    themes: [
-      {
-        mytheme: {
-        
-"primary": "#00d7f1",
-        
-"secondary": "#0074ff",
-        
-"accent": "#5E59C9",
-        
-"neutral": "#fff5ff",
-        
-"base-100": "#1f1b47",
-        
-"info": "#00d3ff",
-        
-"success": "#00c793",
-        
-"warning": "#c98f00",
-        
-"error": "#ff4676",
-        },
-      },
-    ],
+    themes: ['emerald'],
   },
   plugins: [require("daisyui")],
 }
