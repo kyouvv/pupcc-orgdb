@@ -6,6 +6,7 @@ export default function SearchBar({ data, onSuggestionClick }) {
     const [value, setValue] = useState('');
     const [filteredData, setFilteredData] = useState([]);
     const [showSuggestions, setShowSuggestions] = useState(false);
+    const [focused, setFocused] = useState(false)
 
     const onChange = (event) => {
         const searchTerm = event.target.value.toLowerCase();
@@ -26,6 +27,15 @@ export default function SearchBar({ data, onSuggestionClick }) {
         onSuggestionClick(searchTerm);
     };
 
+    const handleBlur = () => {
+        setShowSuggestions(false)
+    }
+    const handleFocus = () => {
+        if(showSuggestions == false){
+            setShowSuggestions(true)
+        }
+    }
+
     return (
         <div className="relative flex flex-row items-center m-2 justify-center rounded-md">
             <input
@@ -34,9 +44,11 @@ export default function SearchBar({ data, onSuggestionClick }) {
                 placeholder="Search Organization"
                 value={value}
                 onChange={onChange}
+                onBlur={handleBlur}
+                onFocus={handleFocus}
             />
 
-            {showSuggestions && filteredData.length > 0 && (
+            {showSuggestions && filteredData.length > 0 && value != '' && (
                 <div className="absolute z-10 w-full h-60 top-full bg-white border border-gray-300 rounded-md shadow-lg overflow-y-auto">
                     {filteredData.map(item => (
                         <button
