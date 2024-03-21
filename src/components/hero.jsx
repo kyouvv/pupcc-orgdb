@@ -24,7 +24,7 @@ function HeroHeader(props) {
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
                     </p>
                     <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-start">
-                        <Link to={'/database'} className="btn btn-primary mb-2 md:mb-4 lg:mb-0 lg:mr-4">Get Started</Link>
+                        <Link to={'/database'} className="btn btn-primary mb-2 md:mb-4 lg:mb-0 lg:mr-4">View Database</Link>
                         <div className="hidden md:block">
                         <SearchBar data={props.data} onSuggestionClick={handleSuggestionClick} />
                         </div>
