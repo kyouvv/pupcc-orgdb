@@ -23,7 +23,7 @@ const DaisyUICard = ({ image, title, description, social, category }) => {
                     <div className="card-actions flex justify-between items-center mt-4">
                         <div>
                             <button className="btn btn-sm btn-secondary" onClick={handleDetailsClick}>Details</button>
-                            <a href={social} className="btn btn-sm btn-info ml-2">Social</a>
+                            <a href={social} target="_blank" className="btn btn-sm btn-info ml-2">Social</a>
                         </div>
                         <div className="badge badge-accent">{category}</div>
                     </div>
