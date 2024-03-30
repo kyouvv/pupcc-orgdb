@@ -2304,20 +2304,12 @@ html:has(.drawer-toggle:checked) {
   position: relative;
 }
 
-.top-full {
-  top: 100%;
-}
-
-.left-96 {
-  left: 24rem;
-}
-
-.left-full {
-  left: 100%;
-}
-
 .left-0 {
   left: 0px;
+}
+
+.top-full {
+  top: 100%;
 }
 
 .z-10 {
@@ -2359,12 +2351,12 @@ html:has(.drawer-toggle:checked) {
   margin-right: 0.5rem;
 }
 
-.mt-4 {
-  margin-top: 1rem;
-}
-
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .block {
@@ -2403,16 +2395,12 @@ html:has(.drawer-toggle:checked) {
   height: 100vh;
 }
 
-.h-44 {
-  height: 11rem;
+.max-h-44 {
+  max-height: 11rem;
 }
 
 .max-h-60 {
   max-height: 15rem;
-}
-
-.max-h-44 {
-  max-height: 11rem;
 }
 
 .min-h-full {
@@ -2561,6 +2549,11 @@ html:has(.drawer-toggle:checked) {
   background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
 }
 
+.bg-neutral-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 229 229 / var(--tw-bg-opacity));
+}
+
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-p,oklch(var(--p)/var(--tw-bg-opacity)));
@@ -2569,16 +2562,6 @@ html:has(.drawer-toggle:checked) {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-secondary {
-  --tw-bg-opacity: 1;
-  background-color: var(--fallback-s,oklch(var(--s)/var(--tw-bg-opacity)));
-}
-
-.bg-neutral-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 229 229 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(https\:\/\/cdn\.discordapp\.com\/attachments\/813768653761806366\/1218410348223139921\/Untitled_design_13\.png\?ex\=6607900f\&is\=65f51b0f\&hm\=814f08f6efce005ec35044dc541a092a54a3d9ef455f7b8d9816941ca8e9514f\&\)\] {
@@ -2687,10 +2670,6 @@ html:has(.drawer-toggle:checked) {
 
 .font-bold {
   font-weight: 700;
-}
-
-.font-semibold {
-  font-weight: 600;
 }
 
 .text-base-200 {

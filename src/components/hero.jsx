@@ -2,6 +2,7 @@ import {React} from "react";
 import Hero from "../assets/hero.png"
 import SearchBar from "./searchbar";
 import { Link, useNavigate } from "react-router-dom";
+import { motion as m } from "framer-motion";
 
 function HeroHeader(props) {
 
@@ -14,7 +15,10 @@ function HeroHeader(props) {
 
     return (
 
-        <div className="hero min-h-screen bg-base-200">
+        <m.div 
+        initial={{ opacity : 0 }}
+        animate={{ opacity : 1 }}
+        className="hero min-h-screen bg-base-200">
             <div className="hero-content flex flex-col lg:flex-row-reverse items-center justify-center lg:justify-between">
                 <img src={Hero} className="max-w-sm md:max-w-lg rounded-lg shadow-2xl" />
                 <div className="text-center lg:text-left">
@@ -31,7 +35,7 @@ function HeroHeader(props) {
                     </div>
                 </div>
             </div>
-        </div>
+        </m.div>
 
 // --------------------------------- ANOTHER LAYOUT ------------------------------------------------//
         // <div className="flex flex-col items-center justify-center min-h-screen py-16 px-4 md:px-0">
