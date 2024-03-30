@@ -2568,6 +2568,10 @@ html:has(.drawer-toggle:checked) {
   background-image: url(https://cdn.discordapp.com/attachments/813768653761806366/1218410348223139921/Untitled_design_13.png?ex=6607900f&is=65f51b0f&hm=814f08f6efce005ec35044dc541a092a54a3d9ef455f7b8d9816941ca8e9514f&);
 }
 
+.bg-\[url\(https\:\/\/cdn\.discordapp\.com\/attachments\/813768653761806366\/1218410348223139921\/Untitled_design_13\.png\?ex\=661a050f\&is\=6607900f\&hm\=1b66b69cd7fcea0d1af9d28b3a3df620680060be8a06a69811fc9849d1aa0b42\&\)\] {
+  background-image: url(https://cdn.discordapp.com/attachments/813768653761806366/1218410348223139921/Untitled_design_13.png?ex=661a050f&is=6607900f&hm=1b66b69cd7fcea0d1af9d28b3a3df620680060be8a06a69811fc9849d1aa0b42&);
+}
+
 .bg-\[url\(https\:\/\/cdn\.discordapp\.com\/attachments\/813768653761806366\/1218492290843283456\/Untitled_design_15\.png\?ex\=6607dc60\&is\=65f56760\&hm\=dd3335bba92d55e5755a6667d55bd24bd71bdc55afe18df648817e86b81f8e6b\&\)\] {
   background-image: url(https://cdn.discordapp.com/attachments/813768653761806366/1218492290843283456/Untitled_design_15.png?ex=6607dc60&is=65f56760&hm=dd3335bba92d55e5755a6667d55bd24bd71bdc55afe18df648817e86b81f8e6b&);
 }
