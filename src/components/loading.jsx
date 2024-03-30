@@ -17,7 +17,7 @@ function LoadingScreen() {
             animate="visible"
             exit="exit"
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="bg-[url(https://cdn.discordapp.com/attachments/813768653761806366/1218410348223139921/Untitled_design_13.png?ex=6607900f&is=65f51b0f&hm=814f08f6efce005ec35044dc541a092a54a3d9ef455f7b8d9816941ca8e9514f&)] bg-cover bg-center w-screen h-screen flex justify-center items-center overflow-hidden relative"> {/* Set relative positioning */}
+            className="bg-[url(https://cdn.discordapp.com/attachments/813768653761806366/1218410348223139921/Untitled_design_13.png?ex=661a050f&is=6607900f&hm=1b66b69cd7fcea0d1af9d28b3a3df620680060be8a06a69811fc9849d1aa0b42&)] bg-cover bg-center w-screen h-screen flex justify-center items-center overflow-hidden relative"> {/* Set relative positioning */}
             <div className="absolute flex flex-col justify-center items-center"> {/* Set absolute positioning */}
                 <img className="w-2/5" src={loading} alt="Loading.." />
                 <p className="text-white text-lg mt-4 font-VT323">Fetching information...</p>
