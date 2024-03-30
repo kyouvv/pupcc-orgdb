@@ -2395,6 +2395,10 @@ html:has(.drawer-toggle:checked) {
   height: 100vh;
 }
 
+.h-60 {
+  height: 15rem;
+}
+
 .max-h-44 {
   max-height: 11rem;
 }
