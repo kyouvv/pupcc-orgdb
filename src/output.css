@@ -2385,12 +2385,21 @@ html:has(.drawer-toggle:checked) {
   height: 1.5rem;
 }
 
+<<<<<<< HEAD
 .h-60 {
   height: 15rem;
 }
 
 .h-screen {
   height: 100vh;
+=======
+.h-screen {
+  height: 100vh;
+}
+
+.max-h-44 {
+  max-height: 11rem;
+>>>>>>> parent of cdba143 (Revert "added categories on search bar :)")
 }
 
 .h-96 {
